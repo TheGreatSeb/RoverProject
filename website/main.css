@@ -1,0 +1,30 @@
+body {
+    background-color: #e3f6f5;
+}
+
+h1 {
+    font-family: 'Nunito', sans-serif;
+    color: #272643;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Nunito', sans-serif;
+    color: #272643;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Nunito', sans-serif;
+    color: #272643;
+    text-align: center;
+}
+
+p {
+    font-family: 'Nunito', sans-serif;
+    color: #272643;
+}
+
+button {
+    background-color: #272643;
+}
