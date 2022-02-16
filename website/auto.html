@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Rover Project</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;500;800&display=swap" rel="stylesheet">
+    <script src="joy.js"></script>
+</head>
+
+<body style="margin: 0;">
+    <h1>
+        Rover Project
+    </h1>
+    <h3>
+        Anas, Danny, Josefine & Sebastian
+    </h3>
+    <p style="text-align: center; margin-top: 240px;">Roveren tager omkring 2 sekunder at opdatere når man laver ændrigner! Roveren kan også have det svært ved at dreje jo hurtigere den kører!</p>
+
+    </div>
+    <div class="center">
+        <div class="slidecontainer">
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            <p style="margin-bottom: 120px;">Rover speed: <span id="demo"></span>%</p>
+        </div>
+    </div>
+    <div class="center" style="width: 120px">
+        <button onclick="window.location.href='index.html'" class="btn" style="border: 0;">
+            Gå tilbage
+        </button>
+    </div>
+    <script>
+        var slider = document.getElementById("myRange");
+        var output = document.getElementById("demo");
+        output.innerHTML = slider.value; // Display the default slider value
+
+        // Update the current slider value (each time you drag the slider handle)
+        slider.oninput = function() {
+            output.innerHTML = this.value;
+        }
+    </script>
+</body>
+
+</html>

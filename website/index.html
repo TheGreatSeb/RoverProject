@@ -15,18 +15,25 @@
 </head>
 
 <body style="margin: 0;">
-    <iframe id="ipCam" title="IP cam" width="300" height="200" src="http://10.10.10.206/admin/">
-    </iframe>
     <h1>
         Rover Project
     </h1>
     <h3>
         Anas, Danny, Josefine & Sebastian
     </h3>
-    <button style="margin-left: 50%; ">
-        Hello
-    </button>
-    <div id="joyDiv" style="width:200px;height:200px;margin-bottom:20px;"></div>
+    <div class="center" style="width: 80%;">
+        <iframe id="ipCam" title="IP cam" width="100%" height="220px" src="http://10.10.10.206/admin/" style="border: 0;">
+        </iframe>
+    </div>
+    <p style="text-align: center;">Brug Joystick til at bevæge Rover</p>
+    <div class="center" id="joyDiv" style="width:200px;height:200px"></div>
+    <div class="center" style="width: 200px">
+        <button onclick="window.location.href='auto.html'" class="btn" style="border: 0;">
+            Switch to Auto Mode
+        </button>
+    </div>
+
+
 </body>
 
 </html>
