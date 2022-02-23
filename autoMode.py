@@ -2,7 +2,7 @@
 Auto Mode
 """
 from hcsr04 import HCSR04
-import motore
+import motor
 from time import ticks_ms, sleep_ms, sleep
 
 sensorRight = HCSR04(trigger_pin=5, echo_pin=18, echo_timeout_us=10000) # Ultrasonic Sensor1
@@ -33,14 +33,14 @@ while True:
             print('Distance Left:', distanceLeft, 'mm')
             #---------- Right motor Distance ----------
             if sensorMinDistance >= sensorRight.distance_mm:
-                motore.motorRight(100)
+                motor.MotorControl(100)
             else:
-                motore.motorRight(websiteSpeed)
+                motor.MotorControl(websiteSpeed)
             #---------- Left motor Distance ----------
             if sensorMinDistance >= sensorLeft.distance_mm:
-                motore.motorLeft, (100)
+                motor.MotorControl(100)
             else:
-                motore.motorLeft(websiteSpeed)
+                motor.MotorControl(websiteSpeed)
 
         except OSError:
             print("Det fucking virkede ikke")
