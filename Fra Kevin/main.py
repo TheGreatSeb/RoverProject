@@ -78,7 +78,8 @@ while True:
   grabOpen = request.find('/?grabOpen=open')
   grabClose = request.find('/?grabClose=close')
 
-  autoModeOn = request.find('/?')
+  autoOn = request.find('/?autoOn=autoModeOn')
+  autoOff = request.find('/?autoOff=autoModeOff')
   
   if speed == 6:
     print('FASTER')
