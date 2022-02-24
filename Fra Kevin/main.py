@@ -4,8 +4,11 @@
 from time import sleep
 import motor
 import servo
+import website
 control = motor.MotorControl(0,0,0,0)
 servoControl = servo.ServoControl(77,77,40)
+
+website.web_page():
 
 def web_page():
   if control.motor1 > 1:
@@ -74,6 +77,8 @@ while True:
   servoDown = request.find('/?servoDown=down')
   grabOpen = request.find('/?grabOpen=open')
   grabClose = request.find('/?grabClose=close')
+
+  autoModeOn = request.find('/?')
   
   if speed == 6:
     print('FASTER')
