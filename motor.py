@@ -1,6 +1,6 @@
 from machine import Pin, PWM
 
-frequency = 5000
+frequency = 500 #ændret til 500 fra 5000
 motor01 = PWM(Pin(2), frequency)
 motor02 = PWM(Pin(12), frequency)
 motor03 = PWM(Pin(13), frequency)
