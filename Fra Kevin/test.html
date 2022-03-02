@@ -4,9 +4,9 @@
     <title>ESP Web Server</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="data:,">
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
     <style>
         html {
             font-family: 'Roboto Mono', monospace;
@@ -26,7 +26,7 @@
         }
 
         h2 {
-            color: #4D0F53:
+            color: #4D0F53;
         }
 
         .button {
@@ -66,36 +66,49 @@
         }
 
         .flex-container {
-    display: flex;
-    justify-content: center;
-  }
+            display: flex;
+            justify-content: center;
+        }
+
+        button:link, button:visited, button:hover, button, :active {
+            text-decoration: none;
+        }
+        .button2:link, .button2:visited, .button2:hover, .button2, :active {
+            text-decoration: none;
+        }
+
     </style>
 </head>
 
 <body style="background-color: #A270A7;">
     <div class="">
-    <h1>ROVER PROJECT</h1>
-    <h2>ARM - CONTROL</h2>
-    <p><a href="/?servoUp=up"><button class="button">UP!</button></a></p>
-    <div class="button2container">
-        <p><a href="/?servoLeft=left"><button class="button2">⬅</button></a></p>
-        <p><a href="/?grabOpen=open"><button class="button2">✊</button></a></p>
-        <p><a href="/?grabClose=close"><button class="button2">🖐</button></a></p>
-        <p><a href="/?servoRight=right"><button class="button2">RIGHT</button></a></p>
+        <h1>ROVER PROJECT</h1>
+        <div style="border: 2px solid red;">
+            <h2>ARM - CONTROL</h2>
+            <p><a href="/?servoUp=up"><button class="button">⬆</button></a></p>
+            <div class="button2container">
+                <p><a href="/?servoLeft=left"><button class="button2">⬅</button></a></p>
+                <p><a href="/?grabOpen=open"><button class="button2">GRAB OPEN</button></a></p>
+                <p><a href="/?grabClose=close"><button class="button2">GRAB CLOSE</button></a></p>
+                <p><a href="/?servoRight=right"><button class="button2">➡</button></a></p>
+            </div>
+            <p><a href="/?servoDown=down"><button class="button">⬇</button></a></p>
+        </div>
+        <h2> MOTOR - CONTROL</h2>
+        <p>Motor state: <strong>""" + gpio_state + """</strong></p>
+        <p><a href="/?speed=faster"><button class="button">FASTER</button></a></p>
+        <div class="button2container">
+            <p><a href="/?left=turnLeft"><button class="button2">⬅️</button></a></p>
+            <p><a href="/?stop=stopNow"><button class="button2">⛔️</button></a></p>
+            <p><a href="/?right=turnRight"><button class="button2">➡️</button></a></p>
+        </div>
+        <p><a href="/?slow=slowDown"><button class="button">SLOWER</button></a></p>
+        <div class="button2container">
+            <p><a href="/?autoOn=autoModeOn"><button class="button2">🤖 ON</button></a></p>
+            <p><a href="/?autoOff=autoModeOff"><button class="button2">🤖 OFF</button></a></p>
+        </div>
+
     </div>
-    <p><a href="/?servoDown=down"><button class="button button">DOWN!</button></a></p>
-    <h2> MOTOR - CONTROL</h2>
-    <p>Motor state: <strong>""" + gpio_state + """</strong></p>
-    <p><a href="/?speed=faster"><button class="button">+ForwardSpeed</button></a></p>
-    <div class="button2container">
-        <p><a href="/?left=turnLeft"><button class="button2">LEFT</button></a></p>
-        <p><a href="/?stop=stopNow"><button class="button2">STOP!</button></a></p>
-        <p><a href="/?right=turnRight"><button class="button2">RIGHT</button></a></p>
-    </div>
-    <p><a href="/?slow=slowDown"><button class="button button">SLOWER</button></a></p>
-    <p><a href="/?autoOn=autoModeOn"><button class="button button">Auto ON</button></a></p>
-    <p><a href="/?autoOff=autoModeOff"><button class="button button">Auto OFF</button></a></p>
-</div>
 </body>
 
 </html>
